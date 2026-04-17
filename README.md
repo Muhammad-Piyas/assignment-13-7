@@ -1,36 +1,175 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧠 KeenKeeper
 
-## Getting Started
+### Keep your connections alive. Stay intentional. Build stronger relationships — one check-in at a time.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-Framework-black)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Styling-38B2AC)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-Components-5A0EF8)
+![Recharts](https://img.shields.io/badge/Recharts-Analytics-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+🌐 **Live Demo** · ⭐ **Star on GitHub** · 🐛 **Report a Bug** · 💡 **Request a Feature**
+
+---
+
+## 🌟 About
+
+In a fast-paced digital world, meaningful relationships often fade without intention.
+**KeenKeeper** is a modern friendship management application that helps you stay connected, organized, and consistent with the people who matter most.
+
+It gives you clarity on your interactions, reminds you when it's time to reconnect, and provides simple tools to maintain strong, lasting relationships — without overcomplication.
+
+---
+
+## ✨ Core Features
+
+### 📞 Smart Quick Actions
+
+Reach out instantly with just one click — no friction, no delay.
+
+- One-click **Call, Text, or Video**
+- Quick actions directly from friend cards & profile
+- Seamless and mobile-friendly interaction
+
+---
+
+### ⏳ Relationship Insights
+
+Always know where you stand in your relationships.
+
+- Track **days since last contact**
+- Smart status indicators: _On Track_, _Almost Due_, _Overdue_
+- Personalized contact goals for each friend
+
+---
+
+### 👤 Friend Profiles
+
+Everything about your connection — in one place.
+
+- Profile picture, bio, email, and tags
+- Clean, structured layout
+- Full interaction timeline per friend
+
+---
+
+### 📜 Timeline Tracking
+
+A complete history of your interactions.
+
+- Logs for **Call, Text, Video**
+- Timestamped entries
+- Filter by interaction type for quick insights
+
+---
+
+### 📊 Friendship Analytics
+
+Understand your communication habits visually.
+
+- Pie chart showing interaction distribution
+- Clear breakdown of Call vs Text vs Video
+- Built using **Recharts**
+
+---
+
+### 🔔 Smart Feedback
+
+Stay informed and in control.
+
+- Toast notifications for actions
+- Loading states for better UX
+- Error handling with custom **404 page**
+
+---
+
+## 🎨 UI & Experience
+
+- ✨ Clean and modern Figma-inspired design
+- 📱 Fully responsive (Mobile, Tablet, Desktop)
+- 🎯 Focused on simplicity and usability
+- 🎨 Color-coded statuses for quick understanding
+- ⚡ Smooth and fast interactions with Next.js
+
+---
+
+## 🚀 Tech Stack
+
+| Technology   | Purpose                   |
+| ------------ | ------------------------- |
+| Next.js      | React framework & routing |
+| React.js     | UI development            |
+| Tailwind CSS | Utility-first styling     |
+| DaisyUI      | Prebuilt UI components    |
+| Recharts     | Data visualization        |
+| npm          | Package management        |
+
+---
+
+## 📁 Project Structure
+
+```
+/app or /pages     # Routing (Next.js)
+/components        # Reusable UI components
+/data              # JSON data (friends)
+/utils             # Helper functions
+/styles            # Global styles
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📦 Installation
 
-## Learn More
+```bash
+# Clone the repository
+git clone https://github.com/your-username/keenkeeper.git
 
-To learn more about Next.js, take a look at the following resources:
+# Navigate into the project
+cd keenkeeper
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Install dependencies
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Run the development server
+npm run dev
+```
 
-## Deploy on Vercel
+🔗 Open **http://localhost:3000** in your browser
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Contributions are welcome and appreciated!
+
+1. Fork the repository
+2. Create your feature branch
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. Commit your changes
+4. Push to GitHub
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 💙 Final Words
+
+**KeenKeeper** isn’t just an app — it’s a small step toward stronger, more intentional relationships.
+Because the best connections don’t happen by chance — they happen by effort.
+
+---
+
+### ✨ Stay connected. Stay human.
+
+### 🤝 Built with purpose — KeenKeeper © 2026

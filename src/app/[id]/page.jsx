@@ -1,10 +1,10 @@
-import QuickCheckIn from "@/Components/QuickCheckIn/QuickCheckIn";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { LuArchive } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { getFriends } from "@/lib/friends";
+import { getFriends } from "@/app/frb/friends";
+import QuickCheckIn from "../components/quickCheckIn/QuickCheckIn";
 
 export const metadata = {
   title: "KeenKeeper | Friends Details page",
