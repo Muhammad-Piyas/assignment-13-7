@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 
 const FriendsCards = ({ friend }) => {
+  if (!friend) return null;
+
   const base = {
     almost_due: "bg-yellow-400 text-white",
     on_track: "bg-green-700 text-white",
@@ -12,7 +14,7 @@ const FriendsCards = ({ friend }) => {
   return (
     <section className="h-full">
       <Link
-        href={`/${friend.id}`}
+        href={`/${friend?.id || ""}`}
         className="bg-base-300 p-5 md:p-7 flex flex-col items-center gap-3 rounded-2xl border border-gray-200 h-full cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:border-[#244d3f]/30 hover:shadow-xl group"
       >
         <div className="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] shrink-0">

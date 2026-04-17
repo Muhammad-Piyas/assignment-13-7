@@ -1,5 +1,13 @@
+import Header from "./components/mainPage/Header";
+import YourFriends from "./components/mainPage/YourFriends";
+import TotalDetails from "./components/mainPage/TotalDetails";
+
 export default function Home() {
   return (
-    <h2 className="text-3xl text-red-500 text-center mt-3">Hello NextJS</h2>
+    <section>
+      <Header />
+      <TotalDetails />
+      <YourFriends />
+    </section>
   );
 }
