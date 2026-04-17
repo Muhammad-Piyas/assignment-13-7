@@ -36,10 +36,8 @@ const Footer = () => {
           </nav>
         </div>
 
-        {/* Divider */}
         <div className="divider before:bg-white/10 after:bg-white/10 my-10"></div>
 
-        {/* Bottom Section: Links & Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm font-medium text-white/50">
           <p>© {new Date().getFullYear()} KeenKeeper. All rights reserved.</p>
 
