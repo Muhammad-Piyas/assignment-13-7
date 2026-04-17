@@ -1,4 +1,4 @@
-
+import Status from "../components/statsPage/Status";
 
 export const metadata = {
   title: "KeenKeeper | Stats page",
@@ -8,12 +8,9 @@ export const metadata = {
 const StatsPage = () => {
   return (
     <section>
-    
+      <Status />
     </section>
   );
 };
-
-export default StatsPage;
-
 
 export default StatsPage;
