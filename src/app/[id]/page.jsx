@@ -10,6 +10,13 @@ export const metadata = {
   title: "KeenKeeper | Friends Details page",
   description: "This is friends Details pages",
 };
+export async function generateStaticParams() {
+  const friends = await getFriends();
+
+  return friends.map((friend) => ({
+    id: friend.id.toString(),
+  }));
+}
 
 const UserCardIdPage = async ({ params }) => {
   const { id } = await params;

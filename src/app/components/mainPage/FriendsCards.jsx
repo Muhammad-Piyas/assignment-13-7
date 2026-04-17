@@ -12,33 +12,35 @@ const FriendsCards = ({ friend }) => {
   };
 
   return (
-    <section className="h-full">
+    <section className="h-full w-full">
       <Link
         href={`/${friend?.id || ""}`}
-        className="bg-base-300 p-5 md:p-7 flex flex-col items-center gap-3 rounded-2xl border border-gray-200 h-full cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:border-[#244d3f]/30 hover:shadow-xl group"
+        className="group relative flex h-full flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-base-300 p-4 transition-all duration-300 hover:border-[#244d3f]/30 hover:shadow-xl md:p-6 lg:p-8 hover:-translate-y-1 active:scale-[0.98]"
       >
-        <div className="relative w-[120px] h-[120px] md:w-[150px] md:h-[150px] shrink-0">
+        <div className="relative aspect-square w-24 shrink-0 sm:w-32 md:w-36 lg:w-40">
           <Image
             fill
             src={friend.image}
             alt={friend.name}
-            className="rounded-full object-cover border-4 border-white shadow-sm group-hover:border-[#244d3f] transition-colors duration-300"
+            sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px, 180px"
+            className="rounded-full border-4 border-white object-cover shadow-sm transition-colors duration-300 group-hover:border-[#244d3f]"
           />
         </div>
 
-        <h3 className="text-xl md:text-2xl font-bold text-center w-full truncate text-base-content mt-2">
-          {friend.name}
-        </h3>
+        <div className="flex w-full flex-col items-center gap-1">
+          <h3 className="w-full truncate text-center text-lg font-bold text-base-content sm:text-xl md:text-2xl">
+            {friend.name}
+          </h3>
+          <p className="text-sm font-semibold text-gray-500 sm:text-base md:text-lg">
+            {friend.days_since_contact}d ago
+          </p>
+        </div>
 
-        <p className="text-lg md:text-xl font-semibold text-gray-500 shrink-0">
-          {friend.days_since_contact}d ago
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-2 flex-1 content-center my-2">
+        <div className="my-2 flex flex-1 flex-wrap justify-center gap-1.5 content-center">
           {friend.tags.map((tag, ind) => (
             <span
               key={ind}
-              className="px-2.5 py-0.5 rounded-full text-xs md:text-sm font-bold bg-green-100 text-green-800 uppercase tracking-wider"
+              className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-green-800 md:text-xs"
             >
               {tag}
             </span>
@@ -46,7 +48,7 @@ const FriendsCards = ({ friend }) => {
         </div>
 
         <span
-          className={`px-4 py-1 rounded-full text-xs md:text-sm font-black uppercase shrink-0 shadow-sm ${
+          className={`shrink-0 rounded-full px-3 py-1 text-[10px] font-black uppercase shadow-sm sm:px-4 sm:text-xs md:text-sm ${
             base[friend.status] || "bg-gray-400 text-white"
           }`}
         >

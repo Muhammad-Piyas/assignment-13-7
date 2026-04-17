@@ -2,13 +2,13 @@
 
 import { BiMessageDetail } from "react-icons/bi";
 import { MdCall, MdVideocam } from "react-icons/md";
-import { useHooks } from "../Context/ProviderContext";
+import { useHooks } from "../context/ProviderContext";
 import { toast } from "react-toastify";
 
 const icons = {
-  call: <MdCall size={30} />,
-  text: <BiMessageDetail size={30} />,
-  video: <MdVideocam size={30} />,
+  call: <MdCall size={28} />,
+  text: <BiMessageDetail size={28} />,
+  video: <MdVideocam size={28} />,
 };
 
 const QuickCheckIn = ({ friendDetails }) => {
@@ -22,24 +22,26 @@ const QuickCheckIn = ({ friendDetails }) => {
 
   const handleClick = (type) => {
     interaction(type, friendDetails);
-    toast.success(messages[type](friendDetails.name));
+    toast.success(messages[type](friendDetails?.name || "Friend"));
   };
 
   return (
-    <section>
-      <h3 className="text-3xl font-semibold mb-5 text-[#244d3f]">
+    <section className="w-full px-4 md:px-0">
+      <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-[#244d3f] text-center md:text-left">
         Quick Check-In
       </h3>
 
-      <div className="grid md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {["call", "text", "video"].map((type) => (
           <button
             key={type}
             onClick={() => handleClick(type)}
-            className="flex flex-col items-center justify-center gap-3 border border-gray-300 rounded-xl py-5 cursor-pointer hover:bg-base-300"
+            className="flex flex-col items-center justify-center gap-2 md:gap-3 border border-gray-200 rounded-2xl py-6 md:py-8 transition-all duration-200 hover:bg-gray-50 active:scale-95 shadow-sm hover:shadow-md"
           >
-            {icons[type]}
-            <span className="text-2xl font-medium capitalize">{type}</span>
+            <div className="text-[#244d3f]">{icons[type]}</div>
+            <span className="text-lg md:text-xl font-medium capitalize">
+              {type}
+            </span>
           </button>
         ))}
       </div>

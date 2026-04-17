@@ -3,37 +3,53 @@ import { getFriends } from "@/app/frb/friends";
 const TotalDetails = async () => {
   const friends = await getFriends();
 
-  const friendOntrack = friends.filter((friend) => friend.status == "on_track");
-  const friendAlon = friends.filter((friend) => friend.status == "overdue");
+  const friendOntrack = friends.filter(
+    (friend) => friend.status === "on_track",
+  );
+  const friendAlon = friends.filter((friend) => friend.status === "overdue");
+
+  const cardStyle =
+    "flex flex-col space-y-2 md:space-y-3 items-center justify-center bg-base-300 border border-gray-200 p-6 py-8 md:py-10 lg:py-12 rounded-2xl shadow-sm transition-all hover:shadow-md";
 
   return (
-    <section>
-      <div className="container mx-auto px-2 grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-        <div className="flex flex-col space-y-3 items-center justify-center bg-base-300 border border-gray-300 p-5 py-10 rounded-md">
-          <h2 className=" text-4xl md:text-5xl font-black text-[#244d3f]">
-            {friends.length}
-          </h2>
-          <p className="text-2xl font-semibold opacity-90">Total Friends</p>
-        </div>
-        <div className="flex flex-col space-y-3 items-center justify-center bg-base-300 border border-gray-300 p-5  py-10 rounded-md">
-          <h2 className=" text-4xl md:text-5xl font-black text-[#244d3f]">
-            {friendOntrack.length}
-          </h2>
-          <p className="text-2xl font-semibold opacity-90">On Track</p>
-        </div>
-        <div className="flex flex-col space-y-3 items-center justify-center bg-base-300 border border-gray-300 p-5 py-10 rounded-md">
-          <h2 className=" text-4xl md:text-5xl font-black text-[#244d3f]">
-            {friendAlon.length}
-          </h2>
-          <p className="text-2xl font-semibold opacity-90">Need Attention</p>
-        </div>
-        <div className="flex flex-col space-y-3 items-center justify-center bg-base-300 border border-gray-300 p-5 py-10 rounded-md">
-          <h2 className=" text-4xl md:text-5xl font-black text-[#244d3f]">
-            {12}
-          </h2>
-          <p className="text-2xl font-semibold opacity-90">
-            Interactions This Month
-          </p>
+    <section className="w-full py-6">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-10">
+          <div className={cardStyle}>
+            <h2 className="text-4xl lg:text-5xl font-black text-[#244d3f]">
+              {friends.length}
+            </h2>
+            <p className="text-lg md:text-xl font-semibold opacity-80 text-center">
+              Total Friends
+            </p>
+          </div>
+
+          <div className={cardStyle}>
+            <h2 className="text-4xl lg:text-5xl font-black text-[#244d3f]">
+              {friendOntrack.length}
+            </h2>
+            <p className="text-lg md:text-xl font-semibold opacity-80 text-center">
+              On Track
+            </p>
+          </div>
+
+          <div className={cardStyle}>
+            <h2 className="text-4xl lg:text-5xl font-black text-[#244d3f]">
+              {friendAlon.length}
+            </h2>
+            <p className="text-lg md:text-xl font-semibold opacity-80 text-center">
+              Need Attention
+            </p>
+          </div>
+
+          <div className={cardStyle}>
+            <h2 className="text-4xl lg:text-5xl font-black text-[#244d3f]">
+              {12}
+            </h2>
+            <p className="text-lg md:text-xl font-semibold opacity-80 text-center">
+              Interactions <span className="block sm:inline">This Month</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
