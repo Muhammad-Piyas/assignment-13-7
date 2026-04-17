@@ -28,105 +28,111 @@ const UserCardIdPage = async ({ params }) => {
   };
 
   return (
-    <section className="container mx-auto px-2 p-3 sm:p-4 md:p-6">
-      <div className="flex flex-col lg:flex-row gap-4 lg:gap-5 items-start">
-        <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full lg:w-120 lg:shrink-0">
-          <div className="bg-base-200 p-10 flex flex-col items-center justify-center space-y-3 rounded-2xl shadow border border-gray-300 flex-1 lg:flex-none">
-            <Image
-              width={150}
-              height={150}
-              src={friendDetails.image}
-              alt={friendDetails.name}
-              className="rounded-full object-cover"
-            />
-            <h3 className="text-3xl font-bold text-center">
-              {friendDetails.name}
-            </h3>
-            <div className="flex flex-col w-fit items-center gap-5">
-              <span className="px-3 py-0.5 rounded-full text-xl font-semibold bg-red-100 text-red-600 uppercase">
-                {friendDetails.status}
-              </span>
-              <div className="flex items-center justify-center gap-5">
-                {friendDetails.tags.map((tag, ind) => (
-                  <span
-                    key={ind}
-                    className={`px-3 py-0.5 rounded-full text-xl font-semibold bg-green-100 text-green-700 uppercase ${
-                      base[friendDetails.status] || "bg-gray-400 text-white"
-                    }`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+    <section className="container mx-auto px-4 py-6 md:py-10">
+      <div className="flex flex-col lg:flex-row gap-6 items-start">
+        <div className="flex flex-col sm:flex-row lg:flex-col gap-4 w-full lg:w-[350px] xl:w-[400px] lg:shrink-0">
+          <div className="bg-base-200 p-6 md:p-8 flex flex-col items-center justify-center space-y-4 rounded-2xl shadow-sm border border-gray-200 flex-1">
+            <div className="relative w-32 h-32 md:w-40 md:h-40">
+              <Image
+                fill
+                src={friendDetails.image}
+                alt={friendDetails.name}
+                className="rounded-full object-cover border-4 border-white shadow-sm"
+              />
             </div>
-            <p className="text-xl text-gray-500 italic text-center">
-              {friendDetails.bio}
-            </p>
-            <p className="text-xl text-gray-400">
-              Preferred: {friendDetails.email}
+
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-bold">
+                {friendDetails.name}
+              </h3>
+              <p className="text-lg text-gray-500 italic mt-1">
+                {friendDetails.bio}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-2">
+              <span
+                className={`px-4 py-1 rounded-full text-xs md:text-sm font-bold uppercase ${base[friendDetails.status] || "bg-gray-400 text-white"}`}
+              >
+                {friendDetails.status.replace("_", " ")}
+              </span>
+              {friendDetails.tags.map((tag, ind) => (
+                <span
+                  key={ind}
+                  className="px-4 py-1 rounded-full text-xs md:text-sm font-bold bg-green-100 text-green-700 uppercase border border-green-200"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-sm md:text-base text-gray-400">
+              Preferred:{" "}
+              <span className="text-gray-600 font-medium">
+                {friendDetails.email}
+              </span>
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-col gap-2 sm:gap-3 flex-1 lg:flex-none">
-            <button className="btn w-full flex items-center justify-center gap-2">
+          <div className="flex flex-row sm:flex-col gap-2 flex-1 lg:flex-none">
+            <button className="btn btn-outline flex-1 lg:w-full flex items-center justify-center gap-2">
               <IoNotificationsOutline size={18} />
-              <span className="font-bold">Snooze 2 Weeks</span>
+              <span className="font-bold hidden sm:inline">Snooze</span>
+              <span className="font-bold sm:hidden">Snooze</span>
             </button>
-            <button className="btn w-full flex items-center justify-center gap-2">
+            <button className="btn btn-outline flex-1 lg:w-full flex items-center justify-center gap-2">
               <LuArchive size={18} />
               <span className="font-bold">Archive</span>
             </button>
-            <button className="btn w-full flex items-center justify-center gap-2 text-red-500 ">
+            <button className="btn btn-outline btn-error flex-1 lg:w-full flex items-center justify-center gap-2">
               <RiDeleteBin6Line size={16} />
               <span className="font-bold">Delete</span>
             </button>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 flex-1 w-full">
-          <div className="grid md:grid-cols-3 gap-5">
-            <div className="flex flex-col items-center justify-center bg-base-200 border border-gray-300 rounded-xl p-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-black text-[#244d3f]">
-                {friendDetails.days_since_contact}
-              </h2>
-              <p className="text-xl font-semibold text-gray-500 mt-2 leading-tight">
-                Days Since Contact
-              </p>
-            </div>
-            <div className="flex flex-col items-center justify-center bg-base-200 border border-gray-300 rounded-xl p-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-black text-[#244d3f]">
-                {friendDetails.goal}
-              </h2>
-              <p className="text-xl font-semibold text-gray-500 mt-2 leading-tight">
-                Goal (Days)
-              </p>
-            </div>
-            <div className="flex flex-col items-center justify-center bg-base-200 border border-gray-300 rounded-xl p-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-black text-[#244d3f]">
-                {friendDetails.next_due_date}
-              </h2>
-              <p className="text-xl font-semibold text-gray-500 mt-2 leading-tight">
-                Next Due
-              </p>
-            </div>
+        <div className="flex flex-col gap-6 flex-1 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              {
+                label: "Days Since Contact",
+                value: friendDetails.days_since_contact,
+              },
+              { label: "Goal (Days)", value: friendDetails.goal },
+              { label: "Next Due", value: friendDetails.next_due_date },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center justify-center bg-base-200 border border-gray-200 rounded-xl p-6 text-center shadow-sm"
+              >
+                <h2 className="text-3xl md:text-4xl font-black text-[#244d3f]">
+                  {stat.value}
+                </h2>
+                <p className="text-sm md:text-base font-semibold text-gray-500 mt-1 uppercase tracking-wide">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
 
-          <div className="bg-base-200 border border-gray-300 rounded-xl p-3 sm:p-4">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-3xl font-semibold text-[#244d3f]">
+          <div className="bg-base-200 border border-gray-200 rounded-xl p-6 shadow-sm">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-[#244d3f]">
                 Relationship Goal
               </h3>
-              <button className="btn">Edit</button>
+              <button className="btn btn-sm btn-ghost border-gray-300">
+                Edit
+              </button>
             </div>
-            <p className="text-xl text-gray-500">
+            <p className="text-lg text-gray-600">
               Connect every{" "}
-              <span className="font-bold text-gray-700">
+              <span className="font-bold text-[#244d3f]">
                 {friendDetails.goal} days
               </span>
             </p>
           </div>
 
-          <div className="bg-base-200 border border-gray-300 rounded-xl p-5">
+          <div className="bg-base-200 border border-gray-200 rounded-xl p-4 md:p-6 shadow-sm">
             <QuickCheckIn
               key={friendDetails.name}
               friendDetails={friendDetails}

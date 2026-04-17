@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Arif Ahmed",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "arif.ahmed@example.com",
+    "days_since_contact": 12,
+    "status": "overdue",
+    "tags": ["college", "close"],
+    "bio": "Met in university. Love hiking together.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Tanvir Rahman",
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "tanvir.r@gmail.com",
+    "days_since_contact": 3,
+    "status": "on_track",
+    "tags": ["work", "mentor"],
+    "bio": "My team lead at the office. Always helpful with career advice.",
+    "goal": 7,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Carlos Mendes",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "carlos.mendes@outlook.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["childhood", "distant"],
+    "bio": "Grew up on the same street. Lost touch after he moved abroad.",
+    "goal": 21,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 4,
+    "name": "Rahul Sharma",
+    "image": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "rahul.sharma@yahoo.com",
+    "days_since_contact": 1,
+    "status": "on_track",
+    "tags": ["family", "close friend"],
+    "bio": "Cousin. We talk almost every day about everything.",
+    "goal": 3,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 5,
+    "name": "James Okafor",
+    "image": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "j.okafor@proton.me",
+    "days_since_contact": 60,
+    "status": "overdue",
+    "tags": ["networking", "tech"],
+    "bio": "Met at a developer conference in 2022. Great conversations about AI.",
+    "goal": 30,
+    "next_due_date": "2025-06-30"
+  },
+  {
+    "id": 6,
+    "name": "Fahim Hasan",
+    "image": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "fahim.h@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost_due",
+    "tags": ["college", "study group"],
+    "bio": "Study partner from my web dev bootcamp. Very talented designer.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 7,
+    "name": "Omar Faruk",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "omar.faruk@bd.com",
+    "days_since_contact": 8,
+    "status": "almost_due",
+    "tags": ["work", "colleague"],
+    "bio": "Works in the same building. Usually grab lunch together on Fridays.",
+    "goal": 14,
+    "next_due_date": "2025-07-23"
+  },
+  {
+    "id": 8,
+    "name": "Nabil Islam",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "nabil.islam@icloud.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["travel", "distant"],
+    "bio": "Met backpacking through Southeast Asia. Keeps life interesting.",
+    "goal": 30,
+    "next_due_date": "2025-06-25"
+  },
+  {
+    "id": 9,
+    "name": "David Kim",
+    "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "david.kim@naver.com",
+    "days_since_contact": 2,
+    "status": "on_track",
+    "tags": ["family", "brother"],
+    "bio": "Older brother. We check in with each other regularly.",
+    "goal": 7,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": 10,
+    "name": "Sajid Khan",
+    "image": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=200&h=200&auto=format&fit=crop",
+    "email": "sajid.khan@mail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["online", "gaming"],
+    "bio": "Met in an online game three years ago. Now a genuine close friend.",
+    "goal": 14,
+    "next_due_date": "2025-07-05"
+  }
+]
